@@ -43,7 +43,7 @@ class PokeCalls extends Component {
     let startNum;
     let currentUrlParams = new URLSearchParams(window.location.search);
     let currentPageNum = currentUrlParams.get("page");
-    currentPageNum = parseInt(currentPageNum);
+    currentPageNum = parseInt(currentPageNum,20);
     let pokeList = [];
     const { filterList } = this.props;
     this.setState({
@@ -83,7 +83,7 @@ class PokeCalls extends Component {
     this.setState({ sorted: false });
     let currentUrlParams = new URLSearchParams(window.location.search);
     let currentPageNum = currentUrlParams.get("page");
-    currentPageNum = parseInt(currentPageNum);
+    currentPageNum = parseInt(currentPageNum,20);
 
     if (!currentPageNum) {
       currentPageNum = 1;
